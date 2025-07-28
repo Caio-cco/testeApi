@@ -2,12 +2,19 @@ import express from 'express';
 const servidor = express();
 
 
-servidor.get('/helloworld', (res, resp ) =>{
+servidor.get('/helloworld', (req, resp ) =>{
 
+    
    resp.send('helloworld!!! :)')
 
 })
 
+servidor.get('/mensagem/boasvindas', (re1, resp) =>{
+
+
+resp.send('Olá, sejam bem-vindos e bem-vindas!')
+
+})
 
 
 
