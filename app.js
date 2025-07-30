@@ -102,12 +102,12 @@ servidor.post('/dobro', (req, resp) =>{
 })
 
 
-api.get('/curso', async (req, resp) => {
+servidor.get('/curso', async (req, resp) => {
   let registros = await listarCursos();
   resp.send(registros);
 })
 
-api.post('/curso', async (req, resp) => {
+servidor.post('/curso', async (req, resp) => {
   let novoCurso = req.body;
 
   let id = await inserirCurso(novoCurso);
